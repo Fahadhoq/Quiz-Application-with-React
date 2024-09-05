@@ -1,12 +1,5 @@
-import React from 'react';
-import Videos from '../Videos';
+import Video from "../Videos";
 
-const Home = ({children}) => {
-    return (
-        <div>
-            <Videos />
-        </div>
-    );
-};
-
-export default Home;
+export default function Home() {
+  return <Video />;
+}
