@@ -7,6 +7,8 @@ import Login from "./pages/Login";
 import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
 import Signup from "./pages/Signup";
+import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
 
 function App() {
   return (
@@ -15,10 +17,10 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/result" element={<Result />} />
+            <Route path="/signup" element={<PublicRoute element={Signup} />}/>
+            <Route path="/login" element={<PublicRoute element={Login} />}/>
+            <Route path="/quiz" element={<PrivateRoute element={Quiz} />} />
+            <Route path="/result" element={<PrivateRoute element={Result} />} />
           </Routes>
         </Layout>
       </AuthProvider>
