@@ -1,5 +1,5 @@
-import Videos from "../Videos";
+import Video from "../Videos";
 
 export default function Home() {
-  return <Videos />;
+  return <Video />;
 }

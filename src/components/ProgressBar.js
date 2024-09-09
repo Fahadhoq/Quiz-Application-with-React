@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 import classes from "../styles/ProgressBar.module.css";
 import Button from "./Button";
-import { Link } from "react-router-dom";
 
 export default function ProgressBar() {
   return (
