@@ -12,11 +12,11 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route exact path='/' Component={Home}/>
-          <Route exact path='/signup' Component={Signup}/>
-          <Route exact path='/login' Component={Login}/>
-          <Route exact path='/quiz' Component={Quiz}/>
-          <Route exact path='/result' Component={Result}/>
+            <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/result" element={<Result />} />
         </Routes>
       </Layout>
     </Router>
