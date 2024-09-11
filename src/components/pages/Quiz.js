@@ -19,7 +19,6 @@ const reducer = (state, action) => {
         });
       });
       return action.value;
-      
     case "answer":
       const questions = _.cloneDeep(state);
       questions[action.questionID].options[action.optionIndex].checked =
@@ -38,7 +37,7 @@ export default function Quiz() {
 
   const [qna, dispatch] = useReducer(reducer, initialState);
   const { currentUser } = useAuth();
-  const navigate = useNavigate();
+  const navigate  = useNavigate();
 
   useEffect(() => {
     dispatch({
@@ -87,7 +86,8 @@ export default function Quiz() {
   }
 
   // calculate percentage of progress
-  const percentage = questions.length > 0 ? ((currentQuestion + 1) / questions.length) * 100 : 0;
+  const percentage =
+    questions.length > 0 ? ((currentQuestion + 1) / questions.length) * 100 : 0;
 
   return (
     <>
@@ -98,6 +98,7 @@ export default function Quiz() {
           <h1>{qna[currentQuestion].title}</h1>
           <h4>Question can have multiple answers</h4>
           <Answers
+            input
             options={qna[currentQuestion].options}
             handleChange={handleAnswerChange}
           />
