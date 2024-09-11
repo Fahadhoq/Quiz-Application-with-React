@@ -41,7 +41,6 @@ export default function Quiz() {
 
   const location = useLocation();
   const { state } = location || {};
-  console.log('location',location);
   const { videoTitle } = state || {};
 
   useEffect(() => {
